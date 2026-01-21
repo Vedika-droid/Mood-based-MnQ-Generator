@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodTune Wireframe - About/Help Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 1.5rem;
+        }
+
+        .header {
+            background-color: #e5e7eb;
+            border: 2px solid #9ca3af;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .header-title {
+            color: #374151;
+            font-size: 1rem;
+        }
+
+        .header-subtitle {
+            color: #6b7280;
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        .navbar {
+            background-color: #d1d5db;
+            border: 2px solid #9ca3af;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-title {
+            color: #374151;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-btn {
+            padding: 0.5rem 1rem;
+            background-color: white;
+            border: 1px solid #9ca3af;
+            cursor: pointer;
+            font-size: 0.75rem;
+            text-decoration: none;
+            color: #374151;
+        }
+
+        .nav-btn:hover {
+            background-color: #f3f4f6;
+        }
+
+        .main-content {
+            border: 2px solid #9ca3af;
+            padding: 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .title-box {
+            background-color: #e5e7eb;
+            border: 2px solid #9ca3af;
+            padding: 1.5rem;
+            display: inline-block;
+        }
+
+        .title-main {
+            font-size: 0.875rem;
+            color: #374151;
+        }
+
+        .title-sub {
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+        }
+
+        .content-section {
+            background-color: #f3f4f6;
+            border: 2px solid #9ca3af;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-header {
+            background-color: #e5e7eb;
+            border: 1px solid #9ca3af;
+            padding: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-header-title {
+            font-size: 0.875rem;
+            color: #374151;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background-color: white;
+            border: 1px solid #9ca3af;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .step-icon {
+            width: 3rem;
+            height: 3rem;
+            background-color: #d1d5db;
+            border: 2px solid #6b7280;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.75rem;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            background-color: #e5e7eb;
+            border: 1px solid #d1d5db;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+        }
+
+        .step-description {
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            padding: 0.5rem;
+            font-size: 0.75rem;
+            color: #4b5563;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .feature-card {
+            background-color: white;
+            border: 2px solid #9ca3af;
+            padding: 1rem;
+        }
+
+        .feature-title {
+            background-color: #e5e7eb;
+            border: 1px solid #d1d5db;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+        }
+
+        .feature-description {
+            font-size: 0.75rem;
+            color: #4b5563;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            background-color: #e5e7eb;
+            border: 1px solid #d1d5db;
+            padding: 0.25rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+        }
+
+        .form-input {
+            width: 100%;
+            background-color: white;
+            border: 2px solid #9ca3af;
+            padding: 0.75rem;
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+
+        .form-textarea {
+            width: 100%;
+            background-color: white;
+            border: 2px solid #9ca3af;
+            padding: 1.5rem;
+            font-size: 0.75rem;
+            color: #6b7280;
+            min-height: 100px;
+        }
+
+        .submit-button {
+            width: 100%;
+            background-color: #d1d5db;
+            border: 2px solid #6b7280;
+            padding: 0.75rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #374151;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #9ca3af;
+        }
+
+        .footer {
+            background-color: #e5e7eb;
+            border: 2px solid #9ca3af;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .footer-title {
+            color: #374151;
+        }
+
+        .footer-subtitle {
+            color: #6b7280;
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        .page-label {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            background-color: #3b82f6;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-label">Wireframe: About/Help Page</div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="section">
+            <div class="header">
+                <div class="header-title">Header</div>
+                <div class="header-subtitle">Logo: MoodTune</div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="section">
+            <div class="navbar">
+                <div class="nav-title">Navigation Bar</div>
+                <div class="nav-buttons">
+                    <a href="wireframe-homepage.html" class="nav-btn">Home</a>
+                    <a href="wireframe-about.html" class="nav-btn">About</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section">
+            <div class="main-content">
+                <!-- Page Title -->
+                <div class="page-title">
+                    <div class="title-box">
+                        <div class="title-main">About / Help Page Title</div>
+                        <div class="title-sub">Heading + Description</div>
+                    </div>
+                </div>
+
+                <!-- How It Works Section -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <div class="section-header-title">Section: "How It Works"</div>
+                    </div>
+
+                    <!-- Step 1 -->
+                    <div class="step-item">
+                        <div class="step-icon">Icon</div>
+                        <div class="step-content">
+                            <div class="step-title">Step 1: Select Your Mood</div>
+                            <div class="step-description">Explanation text about mood selection process...</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-item">
+                        <div class="step-icon">Icon</div>
+                        <div class="step-content">
+                            <div class="step-title">Step 2: Get Playlist</div>
+                            <div class="step-description">Explanation about playlist generation...</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-item">
+                        <div class="step-icon">Icon</div>
+                        <div class="step-content">
+                            <div class="step-title">Step 3: Read Quotes</div>
+                            <div class="step-description">Explanation about motivational quotes...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features Section -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <div class="section-header-title">Section: "Features"</div>
+                    </div>
+
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-title">Feature 1: Dynamic Themes</div>
+                            <div class="feature-description">Description...</div>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-title">Feature 2: Curated Playlists</div>
+                            <div class="feature-description">Description...</div>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-title">Feature 3: Quotes</div>
+                            <div class="feature-description">Description...</div>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-title">Feature 4: Audio Player</div>
+                            <div class="feature-description">Description...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact/Feedback Form -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <div class="section-header-title">Contact / Feedback Form</div>
+                    </div>
+
+                    <form>
+                        <!-- Email Input -->
+                        <div class="form-group">
+                            <div class="form-label">Label: Email</div>
+                            <div class="form-input">Input Field: Email Address</div>
+                        </div>
+
+                        <!-- Message Textarea -->
+                        <div class="form-group">
+                            <div class="form-label">Label: Message</div>
+                            <div class="form-textarea">Textarea: Message content...</div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="button" class="submit-button">
+                            Button: Submit Feedback
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="section">
+            <div class="footer">
+                <div class="footer-title">Footer</div>
+                <div class="footer-subtitle">Copyright & Contact Info</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

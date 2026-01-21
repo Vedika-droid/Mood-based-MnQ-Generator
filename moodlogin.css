@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: beige;
+}
+h2{
+    Padding:25px;
+    font-size: xx-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 5000px;
+
+}
+input{
+    border-radius: 10px;
+    padding:10px;
+}
+.bn
+{
+    padding:20px;
+}
+.fr
+{
+    height:650px;
+    width:900px;
+    border-radius:20%;
+    border: 2px solid burlywood;
+    box-shadow:2px 2px 10px orange;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood corrector</title>
+    <link rel="stylesheet" href="MoodHealer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <span class="menu-icon" onclick="openNav()">☰</span>
+    <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <div class="aa">
+    <a href="MoodHealer.html">Home</a>
+    </div>
+    <div class="b">
+    <a href="moodprofile.html">Mood Graph</a>
+    </div>
+    <div class="c">
+    <a href="moodjournal.html">Daily Mood Journal</a>
+    </div>
+    <div class="d">
+    <a href="gamification.html">Fun Gamification</a>
+    </div>
+  </div>
+
+    <div class="container">
+        <h1>Hey!! How's your mood today?😊</h1>
+        <div class="buttoncontainer">
+            <a href="happy.html">
+            <button id="moodh" class="mood" data-mood="happy">
+                <img src="happy.jpeg" alt="random image">
+                <p>Happy!!</p>
+            </button>
+            </a>
+            <a href="sad.html">
+            <button id="moodS" class="mood" data-mood="sad">
+                <img src="sad.jpeg" alt="Random image">
+                <p>Sad!!</p>
+            </button>
+            </a>
+            <a href="Bhakti.html">
+            <button id="moodB" class="mood" data-mood="bhakti">
+                <img src="bhakti.jpeg" alt="random image">
+                <p>Bhakti!!</p>
+            </button>
+            </a>
+            <a href="motivation.html">
+            <button id="moodM" class="mood" data-mood="motivation">
+                <img src="motivation.jpeg",alt="random image">
+                <p>Motivation!!</p>
+            </button>
+            </a>
+            <a href="Romantic.html">
+            <button id="moodR" class="mood" data-mood="romantic">
+                <img src="Romantic.jpeg" alt="random img">
+                <p>Romantic!!</p>
+            </button>
+            </a>
+            <a href="party.html">
+            <button id="moodP" class="mood" data-mood="party">
+                <img src="Party.jpeg" alt="random image">
+                <p>Party Like!!</p>
+            </button>   
+            </a> 
+        </div>
+        <div id="output">
+            <h4 id="quote">Emotions are like Weather,Music Get's you through it!!</h4>
+            <div id="music"></div>
+        </div>
+    </div>
+    <script src="MoodHealer.js"></script>
+</body>
+</html>

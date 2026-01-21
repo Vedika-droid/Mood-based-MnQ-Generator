@@ -1,0 +1,39 @@
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(-45deg, #bbcdd0, rgb(65, 110, 182), rgb(71, 188, 92), hsl(164, 75%, 19%));
+    background-size: 400% 400%;
+    animation: gradientBG 5s ease infinite;
+}
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+#playlist-container {
+    text-align: center;
+    margin: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#playlist {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#playlist li {
+    padding: 10px;
+    border-bottom: 1px solid white;
+    transition: 0.3s;
+}
+
+#playlist li:hover {
+    background: #444;
+    cursor: pointer;
+}
